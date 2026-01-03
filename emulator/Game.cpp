@@ -1,3 +1,17 @@
+/*
+ * 6502SnakeBot - 6502 snake robot competition
+ * File: Game.cpp
+ *
+ * Part of the 6502SnakeBot project (https://github.com/rainbain/6502SnakeBot)
+ *
+ * Copyright (c) 2026 Samuel Fitzsimons
+ *
+ * This file is licensed under the MIT License.
+ * See the LICENSE file in the project root for full license terms.
+ *
+ * Snake Game logic.
+ */
+
 #include "Game.h"
 
 #include <stdexcept>
