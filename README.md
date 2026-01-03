@@ -86,6 +86,14 @@ To see more options:
 
 ---
 
+### Coding Guide
+
+For documentation on how the 6502 and its memory space are set up, see the hardware docs:  
+[Hardware Documentation](hardware_docs.md)
+
+For an example setup, check the example/template entry:  
+[Golden Entry](entries/golden/README.md)
+
 ## Submitting Entries
 To participate, fork the repository, develop your snake bot, and submit a pull request.
 
