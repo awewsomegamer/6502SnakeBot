@@ -69,7 +69,7 @@ GameRender::GameRender(std::shared_ptr<Game> game) : m_game(game) {
 
 GameRender::~GameRender() {
     for(size_t i = 0; i < texcahche.size(); i++) {
-        if(texcahche[i].tex == NULL) {
+        if(texcahche[i].tex != NULL) {
             SDL_DestroyTexture(texcahche[i].tex);
         }
     }
