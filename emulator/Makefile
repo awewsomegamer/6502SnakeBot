@@ -1,7 +1,7 @@
 CXX      := g++
 CXXFLAGS := -O2 -Wall -Wextra -std=c++20 -g
 LDFLAGS  :=
-LDLIBS   := $(shell pkg-config --libs sdl2 sdl2_ttf)
+LDLIBS   := $(shell pkg-config --libs sdl2 SDL2_ttf)
 CPPFLAGS := $(shell pkg-config --cflags sdl2)
 
 TARGET := emulator
