@@ -58,6 +58,7 @@ Contains the game state.
 |---------|------|-----------------|
 | 0x5000  | 0    | CONTROL          |
 | 0x5001  | 1    | Snake Direction  |
+| 0x5002  | 2    | DEBUG  |
 
 #### CONTROL Register
 | Bit | Name         | Access | Function |
@@ -72,6 +73,9 @@ Contains the game state.
 | 2   | UP        |
 | 1   | RIGHT     |
 | 0   | LEFT      |
+
+#### DEBUG
+Writing to this register outputs the value to console.
 
 ---
 

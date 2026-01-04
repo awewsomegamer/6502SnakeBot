@@ -50,7 +50,7 @@ Emulator::Emulator(std::shared_ptr<Game> game, uint64_t max_clock_cycles)
     // Configure memory
     RAM.resize(0x4000, 0);
     BOARD.resize(board_size, 0);
-    STATE.resize(2, 0);
+    STATE.resize(3, 0);
     ISR.resize(0x10, 0);
 
     // Default ISR
@@ -196,6 +196,10 @@ void Emulator::BusWrite(void* user, uint16_t addr, uint8_t value) {
         th->RAM[addr - 0x0000] = value;
     } else if(addr >= 0x5000 && addr < th->STATE.size() + 0x5000) {
         th->STATE[addr - 0x5000] = value;
+        if(addr == 0x5002) {
+            // Debug Print
+            std::printf("DBG: %02X\n", value);
+        }
     } else if(addr >= 0xFFF0 && addr < th->ISR.size() + 0xFFF0) {
         th->ISR[addr - 0xFFF0] = value;
     } else {
