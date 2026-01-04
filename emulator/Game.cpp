@@ -150,7 +150,7 @@ void Game::spawnFood(GameState& state) {
         return;
     
     // Get random spot
-    std::uniform_int_distribution<uint8_t> dist(0, open_tiles.size() - 1);
+    std::uniform_int_distribution<size_t> dist(0, open_tiles.size() - 1);
 
     GameVec2 pos = open_tiles[dist(rng)];
     state.food = pos;
