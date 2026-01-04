@@ -38,6 +38,8 @@ int main(int argc, char** argv) {
             board_width = std::atoi(argv[++i]);
         } else if(std::strcmp(argv[i], "--height") == 0 && i + 1 < argc) {
             board_height = std::atoi(argv[++i]);
+        } else if(std::strcmp(argv[i], "--seed") == 0 && i + 1 < argc) {
+            initial_seed = std::atoi(argv[++i]);
         } else if(std::strcmp(argv[i], "--fps") == 0 && i + 1 < argc) {
             fps = std::atoi(argv[++i]);
         } else if(std::strcmp(argv[i], "--play") == 0) {
@@ -49,6 +51,7 @@ int main(int argc, char** argv) {
             std::printf("  --rom <file>          Specify ROM binary file (required unless --play)\n");
             std::printf("  --width <num>         Board width\n");
             std::printf("  --height <num>        Board height\n");
+            std::printf("  --seed <num>          RNG seed\n");
             std::printf("  --fps <num>           Frames per second\n");
             std::printf("  --max-cycles <num>    Maximum clock cycles per iteration for emulator\n");
             std::printf("  --play                Play mode (no ROM needed)\n");
